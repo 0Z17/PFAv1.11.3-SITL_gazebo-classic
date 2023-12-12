@@ -1,0 +1,587 @@
+<?xml version="1.0"?>
+<sdf version='1.7'>
+  <model name='skyvortex'>
+    <link name='base_link'>
+      <inertial>
+        <pose>0.017162 -1e-06 0.002366 0 -0 0</pose>
+        <mass>6.36993</mass>
+        <inertia>
+          <ixx>0.0205943</ixx>
+          <ixy>0.000487269</ixy>
+          <ixz>0.00283271</ixz>
+          <iyy>0.0337442</iyy>
+          <iyz>-0.000227574</iyz>
+          <izz>0.028676</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://skyvortex/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__opreater_1_Link_collision_1'>
+        <pose>-0.000711 0.013828 0.011 0 -0 3.1246</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://skyvortex/meshes/opreater_1_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://skyvortex/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__opreater_1_Link_visual_1'>
+        <pose>-0.000711 0.013828 0.011 0 -0 3.1246</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://skyvortex/meshes/opreater_1_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='rotor_1_joint' type='revolute'>
+      <pose relative_to='base_link'>0.46237 0.24264 0.018965 -0.16175 -0.50021 2.4223</pose>
+      <parent>base_link</parent>
+      <child>rotor_1_Link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>50</effort>
+          <velocity>1</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='rotor_1_Link'>
+      <pose relative_to='rotor_1_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-6e-06 -0.001214 -0.003675 0 -0 0</pose>
+        <mass>0.0283309</mass>
+        <inertia>
+          <ixx>1.40941e-06</ixx>
+          <ixy>1.4273e-06</ixy>
+          <ixz>4.51595e-10</ixz>
+          <iyy>0.000388833</iyy>
+          <iyz>-3.25117e-09</iyz>
+          <izz>0.000390194</izz>
+        </inertia>
+      </inertial>
+      <collision name='rotor_1_Link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://skyvortex/meshes/rotor_1_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='rotor_1_Link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://skyvortex/meshes/rotor_1_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='rotor_2_joint' type='revolute'>
+      <pose relative_to='base_link'>0.46237 -0.24264 0.018965 -0.50324 0.15125 -0.25644</pose>
+      <parent>base_link</parent>
+      <child>rotor_2_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>50</effort>
+          <velocity>1</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='rotor_2_link'>
+      <pose relative_to='rotor_2_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-5e-06 -0.001214 -0.003674 0 -0 0</pose>
+        <mass>0.0283322</mass>
+        <inertia>
+          <ixx>1.40934e-06</ixx>
+          <ixy>1.42713e-06</ixy>
+          <ixz>5.6409e-10</ixz>
+          <iyy>0.000388846</iyy>
+          <iyz>-3.25539e-09</iyz>
+          <izz>0.000390207</izz>
+        </inertia>
+      </inertial>
+      <collision name='rotor_2_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://skyvortex/meshes/rotor_2_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='rotor_2_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://skyvortex/meshes/rotor_2_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='rotor_3_joint' type='revolute'>
+      <pose relative_to='base_link'>-0.021053 -0.52175 0.018965 0.29515 -0.43903 -0.62089</pose>
+      <parent>base_link</parent>
+      <child>rotor_3_Link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>50</effort>
+          <velocity>1</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='rotor_3_Link'>
+      <pose relative_to='rotor_3_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-6e-06 -0.001214 -0.003675 0 -0 0</pose>
+        <mass>0.0283311</mass>
+        <inertia>
+          <ixx>1.40942e-06</ixx>
+          <ixy>1.42719e-06</ixy>
+          <ixz>4.54484e-10</ixz>
+          <iyy>0.000388834</iyy>
+          <iyz>-3.25293e-09</iyz>
+          <izz>0.000390195</izz>
+        </inertia>
+      </inertial>
+      <collision name='rotor_3_Link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://skyvortex/meshes/rotor_3_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='rotor_3_Link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://skyvortex/meshes/rotor_3_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='rotor_4_joint' type='revolute'>
+      <pose relative_to='base_link'>-0.44132 -0.27911 0.018965 -0.060114 0.52046 -1.1676</pose>
+      <parent>base_link</parent>
+      <child>rotor_4_Link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>50</effort>
+          <velocity>1</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='rotor_4_Link'>
+      <pose relative_to='rotor_4_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-6e-06 -0.001214 -0.003675 0 -0 0</pose>
+        <mass>0.0283309</mass>
+        <inertia>
+          <ixx>1.4094e-06</ixx>
+          <ixy>1.4273e-06</ixy>
+          <ixz>4.51747e-10</ixz>
+          <iyy>0.000388833</iyy>
+          <iyz>-3.25078e-09</iyz>
+          <izz>0.000390194</izz>
+        </inertia>
+      </inertial>
+      <collision name='rotor_4_Link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://skyvortex/meshes/rotor_4_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='rotor_4_Link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://skyvortex/meshes/rotor_4_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='rotor_5_joint' type='revolute'>
+      <pose relative_to='base_link'>-0.44132 0.27911 0.018965 0.50324 -0.15125 2.8851</pose>
+      <parent>base_link</parent>
+      <child>rotor_5_Link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>50</effort>
+          <velocity>1</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='rotor_5_Link'>
+      <pose relative_to='rotor_5_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-6e-06 -0.001214 -0.003674 0 -0 0</pose>
+        <mass>0.0283321</mass>
+        <inertia>
+          <ixx>1.40934e-06</ixx>
+          <ixy>1.42712e-06</ixy>
+          <ixz>5.76451e-10</ixz>
+          <iyy>0.000388845</iyy>
+          <iyz>-3.25584e-09</iyz>
+          <izz>0.000390206</izz>
+        </inertia>
+      </inertial>
+      <collision name='rotor_5_Link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://skyvortex/meshes/rotor_5_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='rotor_5_Link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://skyvortex/meshes/rotor_5_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='rotor_6_joint' type='revolute'>
+      <pose relative_to='base_link'>-0.021053 0.52175 0.018965 0.27803 0.44962 -2.5605</pose>
+      <parent>base_link</parent>
+      <child>rotor_6_Link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <effort>50</effort>
+          <velocity>1</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='rotor_6_Link'>
+      <pose relative_to='rotor_6_joint'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-6e-06 -0.001214 -0.003675 0 -0 0</pose>
+        <mass>0.0283309</mass>
+        <inertia>
+          <ixx>1.4094e-06</ixx>
+          <ixy>1.42731e-06</ixy>
+          <ixz>4.41943e-10</ixz>
+          <iyy>0.000388832</iyy>
+          <iyz>-3.25057e-09</iyz>
+          <izz>0.000390194</izz>
+        </inertia>
+      </inertial>
+      <collision name='rotor_6_Link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://skyvortex/meshes/rotor_6_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='rotor_6_Link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://skyvortex/meshes/rotor_6_Link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <frame name='opreater_1_joint' attached_to='base_link'>
+      <pose>-0.000711 0.013828 0.011 0 -0 3.1246</pose>
+    </frame>
+    <frame name='opreater_1_Link' attached_to='opreater_1_joint'/>
+
+    <include>
+      <uri>model://gps</uri>
+      <pose>0 0 0 0 0 0</pose>
+      <name>gps</name>
+    </include>
+    <joint name='gps_joint' type='fixed'>
+      <child>gps::link</child>
+      <parent>base_link</parent>
+    </joint>
+
+
+    <plugin name='rosbag' filename='libgazebo_multirotor_base_plugin.so'>
+      <robotNamespace></robotNamespace>
+      <linkName>base_link</linkName>
+      <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+    </plugin>
+    <plugin name='front_right_motor_model' filename='libgazebo_motor_model.so'>
+      <robotNamespace></robotNamespace>
+      <jointName>rotor_0_joint</jointName>
+      <linkName>rotor_0</linkName>
+      <turningDirection>cw</turningDirection>
+      <timeConstantUp>0.0125</timeConstantUp>
+      <timeConstantDown>0.025</timeConstantDown>
+      <maxRotVelocity>1500</maxRotVelocity>
+      <motorConstant>8.54858e-06</motorConstant>
+      <momentConstant>0.06</momentConstant>
+      <commandSubTopic>/gazebo/command/motor_speed</commandSubTopic>
+      <motorNumber>5</motorNumber>
+      <rotorDragCoefficient>0.000806428</rotorDragCoefficient>
+      <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+      <motorSpeedPubTopic>/motor_speed/5</motorSpeedPubTopic>
+      <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+    </plugin>
+    <plugin name='back_left_motor_model' filename='libgazebo_motor_model.so'>
+      <robotNamespace></robotNamespace>
+      <jointName>rotor_1_joint</jointName>
+      <linkName>rotor_1</linkName>
+      <turningDirection>ccw</turningDirection>
+      <timeConstantUp>0.0125</timeConstantUp>
+      <timeConstantDown>0.025</timeConstantDown>
+      <maxRotVelocity>1500</maxRotVelocity>
+      <motorConstant>8.54858e-06</motorConstant>
+      <momentConstant>0.06</momentConstant>
+      <commandSubTopic>/gazebo/command/motor_speed</commandSubTopic>
+      <motorNumber>4</motorNumber>
+      <rotorDragCoefficient>0.000806428</rotorDragCoefficient>
+      <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+      <motorSpeedPubTopic>/motor_speed/4</motorSpeedPubTopic>
+      <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+    </plugin>
+    <plugin name='front_left_motor_model' filename='libgazebo_motor_model.so'>
+      <robotNamespace></robotNamespace>
+      <jointName>rotor_2_joint</jointName>
+      <linkName>rotor_2</linkName>
+      <turningDirection>ccw</turningDirection>
+      <timeConstantUp>0.0125</timeConstantUp>
+      <timeConstantDown>0.025</timeConstantDown>
+      <maxRotVelocity>1500</maxRotVelocity>
+      <motorConstant>8.54858e-06</motorConstant>
+      <momentConstant>0.06</momentConstant>
+      <commandSubTopic>/gazebo/command/motor_speed</commandSubTopic>
+      <motorNumber>3</motorNumber>
+      <rotorDragCoefficient>0.000806428</rotorDragCoefficient>
+      <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+      <motorSpeedPubTopic>/motor_speed/3</motorSpeedPubTopic>
+      <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+    </plugin>
+    <plugin name='back_right_motor_model' filename='libgazebo_motor_model.so'>
+      <robotNamespace></robotNamespace>
+      <jointName>rotor_3_joint</jointName>
+      <linkName>rotor_3</linkName>
+      <turningDirection>cw</turningDirection>
+      <timeConstantUp>0.0125</timeConstantUp>
+      <timeConstantDown>0.025</timeConstantDown>
+      <maxRotVelocity>1500</maxRotVelocity>
+      <motorConstant>8.54858e-06</motorConstant>
+      <momentConstant>0.06</momentConstant>
+      <commandSubTopic>/gazebo/command/motor_speed</commandSubTopic>
+      <motorNumber>2</motorNumber>
+      <rotorDragCoefficient>0.000806428</rotorDragCoefficient>
+      <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+      <motorSpeedPubTopic>/motor_speed/2</motorSpeedPubTopic>
+      <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+    </plugin>
+    <plugin name='back_left_motor_model_2' filename='libgazebo_motor_model.so'>
+      <robotNamespace></robotNamespace>
+      <jointName>rotor_4_joint</jointName>
+      <linkName>rotor_4</linkName>
+      <turningDirection>ccw</turningDirection>
+      <timeConstantUp>0.0125</timeConstantUp>
+      <timeConstantDown>0.025</timeConstantDown>
+      <maxRotVelocity>1500</maxRotVelocity>
+      <motorConstant>8.54858e-06</motorConstant>
+      <momentConstant>0.06</momentConstant>
+      <commandSubTopic>/gazebo/command/motor_speed</commandSubTopic>
+      <motorNumber>1</motorNumber>
+      <rotorDragCoefficient>0.000806428</rotorDragCoefficient>
+      <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+      <motorSpeedPubTopic>/motor_speed/1</motorSpeedPubTopic>
+      <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+    </plugin>
+    <plugin name='front_left_motor_model_2' filename='libgazebo_motor_model.so'>
+      <robotNamespace></robotNamespace>
+      <jointName>rotor_5_joint</jointName>
+      <linkName>rotor_5</linkName>
+      <turningDirection>cw</turningDirection>
+      <timeConstantUp>0.0125</timeConstantUp>
+      <timeConstantDown>0.025</timeConstantDown>
+      <maxRotVelocity>1500</maxRotVelocity>
+      <motorConstant>8.54858e-06</motorConstant>
+      <momentConstant>0.06</momentConstant>
+      <commandSubTopic>/gazebo/command/motor_speed</commandSubTopic>
+      <motorNumber>0</motorNumber>
+      <rotorDragCoefficient>0.000806428</rotorDragCoefficient>
+      <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>
+      <motorSpeedPubTopic>/motor_speed/0</motorSpeedPubTopic>
+      <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>
+    </plugin>
+
+    <plugin name='groundtruth_plugin' filename='libgazebo_groundtruth_plugin.so'>
+      <robotNamespace/>
+    </plugin>
+    <plugin name='magnetometer_plugin' filename='libgazebo_magnetometer_plugin.so'>
+      <robotNamespace/>
+      <pubRate>100</pubRate>
+      <noiseDensity>0.0004</noiseDensity>
+      <randomWalk>6.4e-06</randomWalk>
+      <biasCorrelationTime>600</biasCorrelationTime>
+      <magTopic>/mag</magTopic>
+    </plugin>
+    <plugin name='barometer_plugin' filename='libgazebo_barometer_plugin.so'>
+      <robotNamespace/>
+      <pubRate>50</pubRate>
+      <baroTopic>/baro</baroTopic>
+    </plugin>
+    <plugin name='mavlink_interface' filename='libgazebo_mavlink_interface.so'>
+      <robotNamespace></robotNamespace>
+      <imuSubTopic>/imu</imuSubTopic>
+      <magSubTopic>/mag</magSubTopic>
+      <baroSubTopic>/baro</baroSubTopic>
+      <mavlink_addr>INADDR_ANY</mavlink_addr>
+      <mavlink_tcp_port>4560</mavlink_tcp_port>
+      <mavlink_udp_port>14560</mavlink_udp_port>
+      <serialEnabled>0</serialEnabled>
+      <serialDevice>/dev/ttyACM0</serialDevice>
+      <baudRate>921600</baudRate>
+      <qgc_addr>INADDR_ANY</qgc_addr>
+      <qgc_udp_port>14550</qgc_udp_port>
+      <sdk_addr>INADDR_ANY</sdk_addr>
+      <sdk_udp_port>14540</sdk_udp_port>
+      <hil_mode>0</hil_mode>
+      <hil_state_level>false</hil_state_level>
+      <enable_lockstep>false</enable_lockstep>
+      <use_tcp>true</use_tcp>
+      <motorSpeedCommandPubTopic>/gazebo/command/motor_speed</motorSpeedCommandPubTopic>
+      <control_channels>
+        <channel name="rotor0">
+          <input_index>0</input_index>
+          <input_offset>0</input_offset>
+          <input_scaling>1500</input_scaling>
+          <zero_position_disarmed>0</zero_position_disarmed>
+          <zero_position_armed>100</zero_position_armed>
+          <joint_control_type>velocity</joint_control_type>
+        </channel>
+        <channel name="rotor1">
+          <input_index>1</input_index>
+          <input_offset>0</input_offset>
+          <input_scaling>1500</input_scaling>
+          <zero_position_disarmed>0</zero_position_disarmed>
+          <zero_position_armed>100</zero_position_armed>
+          <joint_control_type>velocity</joint_control_type>
+        </channel>
+        <channel name="rotor2">
+          <input_index>2</input_index>
+          <input_offset>0</input_offset>
+          <input_scaling>1500</input_scaling>
+          <zero_position_disarmed>0</zero_position_disarmed>
+          <zero_position_armed>100</zero_position_armed>
+          <joint_control_type>velocity</joint_control_type>
+        </channel>
+        <channel name="rotor3">
+          <input_index>3</input_index>
+          <input_offset>0</input_offset>
+          <input_scaling>1500</input_scaling>
+          <zero_position_disarmed>0</zero_position_disarmed>
+          <zero_position_armed>100</zero_position_armed>
+          <joint_control_type>velocity</joint_control_type>
+        </channel>
+        <channel name="rotor4">
+          <input_index>4</input_index>
+          <input_offset>0</input_offset>
+          <input_scaling>1500</input_scaling>
+          <zero_position_disarmed>0</zero_position_disarmed>
+          <zero_position_armed>100</zero_position_armed>
+          <joint_control_type>velocity</joint_control_type>
+        </channel>
+       <channel name="rotor5">
+          <input_index>5</input_index>
+          <input_offset>0</input_offset>
+          <input_scaling>1500</input_scaling>
+          <zero_position_disarmed>0</zero_position_disarmed>
+          <zero_position_armed>100</zero_position_armed>
+          <joint_control_type>velocity</joint_control_type>
+        </channel>
+
+      </control_channels>
+    </plugin>
+    <static>0</static>
+    <plugin name='gazebo_imu_plugin' filename='libgazebo_imu_plugin.so'>
+      <robotNamespace></robotNamespace>
+      <linkName>skyvortex/imu_link</linkName>
+      <imuTopic>/imu</imuTopic>
+      <gyroscopeNoiseDensity>0.0003394</gyroscopeNoiseDensity>
+      <gyroscopeRandomWalk>3.8785e-05</gyroscopeRandomWalk>
+      <gyroscopeBiasCorrelationTime>1000.0</gyroscopeBiasCorrelationTime>
+      <gyroscopeTurnOnBiasSigma>0.0087</gyroscopeTurnOnBiasSigma>
+      <accelerometerNoiseDensity>0.004</accelerometerNoiseDensity>
+      <accelerometerRandomWalk>0.006</accelerometerRandomWalk>
+      <accelerometerBiasCorrelationTime>300.0</accelerometerBiasCorrelationTime>
+      <accelerometerTurnOnBiasSigma>0.196</accelerometerTurnOnBiasSigma>
+    </plugin>
+  </model>
+</sdf>
