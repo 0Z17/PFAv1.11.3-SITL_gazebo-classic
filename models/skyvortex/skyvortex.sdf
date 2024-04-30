@@ -199,12 +199,21 @@
         </inertia> -->
 
       </inertial>
-      <collision name='operator_1_collision'>
-        <pose>0.26 -0.01 0.14 0 -0 0</pose>
+      <collision name='operator_1_collision_base'>
+        <pose>0 0 -0.02 0 -0 0</pose>
         <geometry>
           <box>
-            <size>1.17 0.08 0.81</size>
+            <size>0.65168 0.079868 0.520593</size>
           </box>
+        </geometry>
+      </collision>
+      <collision name='operator_1_collision_link'>
+        <pose>0.4 0 0.235 0.03 1.06 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.04</radius>
+            <length>1</length>
+          </cylinder>
         </geometry>
       </collision>
       <visual name='operator_1_visual'>
