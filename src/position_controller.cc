@@ -38,9 +38,9 @@ namespace gazebo
       // Default value
       double position = 0.0, p_gain, i_gain, d_gain;
 
-      if (_sdf->HasElement("jointname"))
+      if (_sdf->HasElement("joint_name"))
       {
-        joint_name_ori = _sdf->Get<std::string>("jointname");
+        joint_name_ori = _sdf->Get<std::string>("joint_name");
         if (joint_name_ori.find(_model->GetName() + "::") == 0)
         {
           joint_name = joint_name_ori;
